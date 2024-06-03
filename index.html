@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Correction and Fitness Guidance</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src='sketch.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Posture Correction and Fitness Guidance</h1>
+    </header>
+    <main>
+        <div id="canvasWrapper">
+            <canvas id="canvas"></canvas>
+            <div id="alerts"></div>
+        </div>
+        <div id="exerciseGuidance">
+            <h2>Select an Exercise</h2>
+            <div class="exercise-icons">
+                <img src="icons/squats.png" alt="Squat" onclick="setExercise('squat')">
+                <img src="icons/pushup.png" alt="Push-up" onclick="setExercise('pushup')">
+                <img src="icons/jump.png" alt="Jump" onclick="setExercise('jump')">
+                <img src="icons/lunge.png" alt="Lunge" onclick="setExercise('lunge')">
+                <img src="icons/hand-stretch.png" alt="Hand Stretch" onclick="setExercise('hand-stretch')">
+                <img src="icons/side-stretch.png" alt="Side Stretch" onclick="setExercise('side-stretch')">
+                <img src="icons/wrist-rotation.png" alt="Wrist Rotation" onclick="setExercise('wrist-rotation')">
+            </div>
+            <p id="selectedExercise">Selected Exercise: None</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Posture Correction and Fitness Guidance</p>
+    </footer>
+</body>
+</html>

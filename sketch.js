@@ -6,6 +6,7 @@ let exercise = ''; // Current exercise
 
 function setup() {
     let canvas = createCanvas(800, 500);
+    canvas.id('canvas'); // Assign the ID to the created canvas
     canvas.parent('canvasWrapper');
     capture = createCapture(VIDEO);
     capture.size(800, 500);
@@ -28,7 +29,8 @@ function modelLoaded() {
 }
 
 function draw() {
-    image(capture, 0, 0);
+    clear();
+    image(capture, 0, 0, width, height);
     if (singlePose) {
         drawKeypoints(singlePose);
         drawSkeleton(skeleton);
@@ -66,8 +68,6 @@ function checkPosture(pose) {
         let rightWrist = pose.keypoints[10].position;
         let leftElbow = pose.keypoints[7].position;
         let rightElbow = pose.keypoints[8].position;
-        let leftShoulder = pose.keypoints[5].position;
-        let rightShoulder = pose.keypoints[6].position;
 
         // Check if arms are straight and stretched
         if (dist(leftWrist.x, leftWrist.y, leftElbow.x, leftElbow.y) < 100 || 

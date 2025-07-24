@@ -16,6 +16,16 @@ This project leverages the PoseNet model to provide visual guidance for various 
 - **ml5.js**: A friendly high-level interface to TensorFlow.js, used here for the PoseNet model.
 - **p5.js**: A JavaScript library that makes coding accessible for artists, designers, educators, and beginners.
 
+## PoseNet Model Preview
+
+Below is a preview of the PoseNet model in action, as used in this project for real-time posture detection:
+
+<p align="center">
+  <img src="icons/posnet2.png" alt="PoseNet Model" width="600"/>
+</p>
+
+PoseNet helps identify key points on the human body to evaluate and guide posture during exercises like squats, push-ups, and more.
+
 ## Setup
 
 1. Clone the repository:
@@ -39,5 +49,6 @@ This project leverages the PoseNet model to provide visual guidance for various 
 
 - `index.html`: The main HTML file that structures the web page.
 - `styles.css`: The CSS file for styling the web page.
+
 - `sketch.js`: The JavaScript file containing the main logic for PoseNet integration and exercise feedback.
 - `icons/`: Directory containing icons for each exercise.
